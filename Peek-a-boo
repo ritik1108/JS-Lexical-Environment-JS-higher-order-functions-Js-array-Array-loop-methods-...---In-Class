@@ -1,0 +1,38 @@
+<!-- <h1>I am a headline made with HTML</h1>
+<br />
+<p id="useless-paragraph">Useless paragraph.</p>
+<br />
+<button id="button" onclick="toggleVisibility()">Toggle Button</button>
+
+
+ <span id="textIsHidden">see</span> more info about me -->
+
+<h1>I am a headline made with HTML</h1>
+ <p>
+    <button onclick="toggleVisibility();">Toggle Button</button>
+     <span id="textIsHidden"></span>
+</p>
+
+<p id="useless-paragraph" style="display:none;">Useless paragraph.</p>
+
+
+
+
+
+
+// your js code goes here
+function toggleVisibility(){
+    if(document.getElementById("textIsHidden").innerText == "see"){
+        //If the sentence says "see more info"
+
+        //First, change the sentence to read "hide more info"
+        document.getElementById("textIsHidden").innerText = "hide";
+        //Next, change the display on the paragraph to block,
+        //which makes it visible
+        document.getElementById("useless-paragraph").style.display = "block";
+    } else {
+        //If the sentence doesn't say "see more info", revert everything
+        document.getElementById("textIsHidden").innerText = "see";
+        document.getElementById("useless-paragraph").style.display = "none";
+    }
+}
